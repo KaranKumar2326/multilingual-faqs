@@ -61,7 +61,7 @@ The **Admin Panel** provides a web-based interface to **manage FAQs** with multi
 
 Here is a screenshot of the admin panel:
 
-![Admin Panel Screenshot](Screenshot%2025-02-03%211333.png)
+![Admin Panel Screenshot](./Screenshot%202025-02-03%20211333.png)
 
 
 
