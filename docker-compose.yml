@@ -1,0 +1,40 @@
+
+services:
+  redis:
+    image: redis:latest
+    container_name: multilingual-faqs-redis
+    restart: always
+    networks:
+      - multilingual-network
+    ports:
+      - "6379:6379"
+  
+
+  mongodb:
+    image: mongo:latest
+    container_name: multilingual-faqs-mongodb
+    restart: always
+    networks:
+      - multilingual-network
+    ports:
+      - "27017:27017"
+
+
+  app:
+    build: .
+    container_name: multilingual-faqs-app
+    depends_on:
+      - redis
+      - mongodb
+    environment:
+      REDIS_HOST: redis   # Use service name "redis"
+      REDIS_PORT: 6379
+      MONGO_URI: mongodb://mongodb:27017/multilingual-faqs
+    networks:
+      - multilingual-network
+    ports:
+      - "8000:8000"
+    restart: always
+networks:
+  multilingual-network:
+    driver: bridge
