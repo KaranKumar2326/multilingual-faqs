@@ -59,6 +59,12 @@ npm start
 
 The **Admin Panel** provides a web-based interface to **manage FAQs** with multilingual support.
 
+Here is a screenshot of the admin panel:
+
+![Admin Panel Screenshot](Screenshot%2025-02-03%211333.png)
+
+
+
 ### **🔗 Access the Admin Panel**
 ```
 http://localhost:8000/admin.html
